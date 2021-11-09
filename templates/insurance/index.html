@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<style>
+  .xyz {
+    margin-bottom: 0px;
+    background-image: url('{% static "image/homepage.jpg" %}');
+    background-position: centre centre;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: azure;
+    backdrop-filter: blur(5px);
+    background-attachment: fixed;
+  }
+
+  #wooo {
+    background-color: rgb(0, 0, 0, 0.4);
+  }
+
+  #wq {
+    color: seashell;
+  }
+</style>
+
+<body>
+  {% include "insurance/navbar.html" %}
+  <br>
+  <section id="section-jumbotron" style="margin-bottom: 0px;"
+    class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center xyz">
+    <div class="container text-center">
+
+      <div class="jumbotron text-center" style="margin-bottom:0px;" id="wooo">
+        <h1 class="display-4" id="wq">Get your <strong>Insurance</strong></h1>
+
+
+     
+        <p class="lead" id="wq">
+          Life Insurance is a financial cover for a contingency linked with human life, like death, disability, accident, retirement etc. Human life is subject to risks of death and disability due to natural and accidental causes. When human life is lost or a person is disabled permanently or temporarily, there is loss of income to the household.
+
+          Though human life cannot be valued, a monetary sum could be determined based on the loss of income in future years. Hence, in life insurance, the Sum Assured ( or the amount guaranteed to be paid in the event of a loss) is by way of a ‘benefit’.  Life Insurance products provide a definite amount of money in case the life insured dies during the term of the policy or becomes disabled on account of an accident.
+        </p>
+        <hr class="my-4">
+
+        <p class="lead">
+
+          <a class="btn btn-primary btn-lg" href="customer/customerclick" role="button" id="wq">Get a quote</a>
+        </p>
+        <br><br><br>
+      </div>
+      <p class="lead text-center" id="wq"> “Whole life does two things for you: Protects your family and allows you to
+        save for your future.”
+      </p>
+
+
+
+
+
+    </div>
+  </section>
+
+
+
+  {% include "insurance/footer.html" %}
+
+
+</body>
+
+</html>

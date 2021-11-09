@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <style>
+    #x {
+        color: rgb(0, 0, 0); 
+        font-weight: 700;
+
+
+} 
+    #x2 { 
+        
+        color: rgb(0, 0, 0);
+} 
+body{
+  background-image: url('{% static "image/23.jpg" %}');
+  margin-bottom: 0px;
+
+    background-position: centre centre;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: azure;
+    /* backdrop-filter: blur(5px); */
+    background-attachment: fixed;
+
+
+}
+  </style>
+
+
+</head>
+
+<body>
+
+  {% include "insurance/navbar.html" %}
+  <br><br>
+    <div class="container" style="backdrop-filter: blur(5px);box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);">
+  
+    <h3 id="x">Send Us Your Valuable Feedback</h3>
+
+    <form method="POST" autocomplete="off" id="x">
+      <!-- Very Important csrf Token -->
+      {% csrf_token %}
+      <div class="form-group">
+        <p>
+        <h3>{{ form.as_p }}</h3>
+        </p>
+        <br>
+        <input type="submit" value="Send Message" class='btn btn-primary btn-lg'>
+      </div>
+    </form>
+</div>
+
+  {% include "insurance/footer.html" %}
+</body>
+
+</html>

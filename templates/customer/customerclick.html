@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <style media="screen">
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+
+    }
+
+    .jumbotron h1 {
+      text-align: center;
+    }
+
+    body {
+      margin-bottom: 0px;
+      background-image: url('{% static "image/get.jpg" %}');
+      background-position: centre centre;
+
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-color: azure;
+    
+      background-attachment: fixed;
+    }
+
+    #wooo {
+      background-color: rgba(255, 255, 255, 0.4); 
+      
+    }
+
+    #wq {
+      color: rgb(7, 7, 7);
+    }
+  </style>
+
+</head>
+
+<body>
+
+  {% include "insurance/navbar.html" %}
+  <br><br>
+  
+    <div class="container text-center">
+
+      <div class="jumbotron text-center" style="margin-bottom:0px;" id="wooo">
+        <h1 class="display-4" id="wq">Hello Customer!</h1>
+        <p class="lead" id="wq">Welcome to Insurance Management System</p>
+        <hr class="my-4">
+        <p id="wq">You can access various features after Login.</p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="/customer/customersignup" role="button" id="wq">Create Your
+            Account</a>
+          <a class="btn btn-primary btn-lg" href="/customer/customerlogin" role="button" id="wq">Login</a>
+        </p>
+        <br><br><br>
+      </div>
+  
+
+
+
+
+
+    </div>
+
+
+  {% include "insurance/footer.html" %}
+</body>
+
+</html>
