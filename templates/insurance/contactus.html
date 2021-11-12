@@ -6,16 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <style>
-    #x {
-        color: rgb(0, 0, 0); 
-        font-weight: 700;
-
-
-} 
-    #x2 { 
-        
-        color: rgb(0, 0, 0);
-} 
+  
 body{
   background-image: url('{% static "image/23.jpg" %}');
   margin-bottom: 0px;
@@ -47,9 +38,9 @@ body{
       <!-- Very Important csrf Token -->
       {% csrf_token %}
       <div class="form-group">
-        <p>
-        <h3>{{ form.as_p }}</h3>
-        </p>
+       
+      {{ form.as_p }}
+       
         <br>
         <input type="submit" value="Send Message" class='btn btn-primary btn-lg'>
       </div>
